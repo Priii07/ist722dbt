@@ -19,7 +19,7 @@ FROM {{ source('northwind', 'Orders') }}
 stg_order_details as(
     SELECT 
         orderid, 
-        sum(quantity) as quntityonorder, 
+        sum(quantity) as quantityonorder, 
         sum(quantity*UnitPrice*(1-Discount)) as totalorderamount
     FROM {{ source('northwind', 'Order_Details') }}
     GROUP BY orderid
@@ -31,7 +31,7 @@ stg_shippers as (
 SELECT
     o.*,
     s.companyname as shippercompanyname,
-    od.quntityonorder,
+    od.quantityonorder,
     od.totalorderamount,
     o.shippeddatekey - o.orderdatekey as daysfromordertoshipped,
     o.requireddatekey - o.orderdatekey as daysfromordertorequired,
