@@ -11,7 +11,7 @@ models:
           - not_null
       
       - name: customerkey
-        description: Dimension key for dim_customer
+        description: Dimension key for dim_customer.
       
       - name: employeekey
         description: Dimension Key for dim_employee
