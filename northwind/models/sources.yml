@@ -44,7 +44,7 @@ sources:
       
       - name: Employees
         columns: 
-          - name: CustomerId
+          - name: EmployeeId
             tests:
               - unique
 
