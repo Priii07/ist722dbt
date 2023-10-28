@@ -4,7 +4,7 @@ models:
   - name: fact_order_fullfillment
     description: Order Level fact table. Transaction one row per order does not include productbut can track order fullfillment
     columns:
-      - name: OrderId
+      - name: orderid
         description: Degenerate Dimension for the order
         tests:
           - unique
@@ -25,7 +25,7 @@ models:
       - name: shippeddatekey
         description: role play Shipped Date Dimension key for dim_date
 
-      - name: qunatity
+      - name: quantityonorder
         description: Additive fact for total qunatity of product sold on order
       
       - name: totalorderamount

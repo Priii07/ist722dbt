@@ -7,7 +7,7 @@ stg_categories as (
 
 SELECT 
     {{ dbt_utils.generate_surrogate_key(['s.productid'])}} as productkey,
-    s.productid,
+    s.productid as productid,
     s.productname,
     s.supplierid as supplierkey,
     c.categoryname,
