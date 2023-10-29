@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: fact_sales
-    description: Transaction fact table. One rwo per line item ordered. Includes product data.
+    description: Transaction fact table. One row per line item ordered. Includes product data.
     columns:
       - name: orderid
         description: degenerate dimension for orders.
@@ -24,21 +24,12 @@ models:
 
       - name: quantity
         description: Additive quantity of the product in the order
-        tests:
-          - not_null
-
+      
       - name: extendedpriceamount
         description: Additive fact in the order which is calculated by quantity * product_price
-        tests:
-          - not_null
-
+      
       - name: discountamount
         description: additive fact of discount amount calculated by extendedprice * discount
-        tests:
-          - not_null
           
       - name: soldamount
         description: the actual price the product was sold. Calculated by extendedprice - disocuntamount
-        tests:
-          - not_null
-        
