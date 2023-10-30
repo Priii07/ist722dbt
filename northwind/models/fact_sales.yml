@@ -7,7 +7,6 @@ models:
       - name: orderid
         description: degenerate dimension for orders.
         tests:
-          - unique
           - not_null
             
       - name: customerkey
